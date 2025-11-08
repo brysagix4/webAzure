@@ -57,6 +57,6 @@ document.getElementById("registroForm").addEventListener("submit", async functio
         document.getElementById("mensaje").innerText = result.message || "Usuario registrado correctamente ✅";
     } catch (error) {
         console.error("Error:", error);
-        document.getElementById("mensaje").innerText = result.message || "❌ Error al registrar el usuario";
+        document.getElementById("mensaje").innerText = "❌ Error al registrar el usuario";
     }
 });
