@@ -1,3 +1,6 @@
+console.log("✅ El script.js se cargó correctamente");
+
+
 document.getElementById("registroForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
