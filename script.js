@@ -2,7 +2,7 @@ document.getElementById("registroForm").addEventListener("submit", async functio
   e.preventDefault();
 
   const data = {
-    userID: document.getElementById("userID").value,
+    userID: Number(document.getElementById("userID").value),
     nombre1: document.getElementById("nombre1").value,
     nombre2: document.getElementById("nombre2").value,
     apellido1: document.getElementById("apellido1").value,
@@ -13,7 +13,7 @@ document.getElementById("registroForm").addEventListener("submit", async functio
   };
 
   try {
-    const response = await fetch("https://<TU-ENDPOINT>.execute-api.us-east-1.amazonaws.com/prod", {
+    const response = await fetch("https://w2mb06yk3h.execute-api.us-east-1.amazonaws.com/default/crubBaseDatosDynamoRegistro", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
