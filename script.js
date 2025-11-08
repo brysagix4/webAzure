@@ -4,7 +4,13 @@ document.getElementById("registroForm").addEventListener("submit", async functio
     
     let username = document.getElementById("username").value.trim();
     const correo = String(document.getElementById("email").value).trim();
+    let nombre2 = document.getElementById("nombre2").value.trim();
+    let apellido2 = document.getElementById("apellido2").value.trim();
+    let user; 
 
+    // Reemplazar vacíos por ""
+    nombre2 = nombre2 || "";
+    apellido2 = apellido2 || "";
     
     if (!username) {
         // Extraer la parte antes del @
@@ -24,9 +30,9 @@ document.getElementById("registroForm").addEventListener("submit", async functio
     const data = {
         userID: Number(document.getElementById("userID").value),
         nombre1: document.getElementById("nombre1").value.trim(),
-        nombre2: document.getElementById("nombre2").value.trim(),
+        nombre2: nombre2,
         apellido1: document.getElementById("apellido1").value.trim(),
-        apellido2: document.getElementById("apellido2").value.trim(),
+        apellido2: apellido2,
         password: pass,
         email: correo,
         username: user
