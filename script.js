@@ -2,7 +2,6 @@ document.getElementById("registroForm").addEventListener("submit", async functio
   e.preventDefault();
 
   const data = {
-    userID: Number(document.getElementById("userID").value),
     nombre1: document.getElementById("nombre1").value,
     nombre2: document.getElementById("nombre2").value,
     apellido1: document.getElementById("apellido1").value,
@@ -14,17 +13,15 @@ document.getElementById("registroForm").addEventListener("submit", async functio
   try {
     const response = await fetch("https://w2mb06yk3h.execute-api.us-east-1.amazonaws.com/default/crubBaseDatosDynamoRegistro", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify(data)
     });
 
     const result = await response.json();
-
-    document.getElementById("mensaje").innerText =
-      result.message || "Usuario registrado correctamente ✅";
-
+    document.getElementById("mensaje").innerText = result.message || "✅ Usuario registrado correctamente";
   } catch (error) {
-    console.error("Error:", error);
     document.getElementById("mensaje").innerText = "❌ Error al registrar el usuario.";
   }
 });
