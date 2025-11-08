@@ -56,13 +56,23 @@ document.getElementById("registroForm").addEventListener("submit", async functio
 
     
         if (result.status === false) {
-        // Mensaje de error que viene del backend
-            document.getElementById("mensaje").innerText = "❌ Error al registrar el usuario";
+
+            alert("El usuario ya existe.\nPor favor, cambie el Usuario y/o el Correo.");
+            // Mensaje de error que viene del backend
+            //document.getElementById("mensaje").innerText = "❌ Error al registrar el usuario";
+            
+            // Limpiar solo el username y el email
+            //document.getElementById("userID").value = "";
+            //document.getElementById("email").value = "";
+
+            // Limpiar el formulario
+            document.getElementById("registroForm").reset();
             } 
 
         else {  
-        // Mensaje de éxito
-             document.getElementById("mensaje").innerText = result.message || "Usuario registrado correctamente ✅";
+            alert("Usuario registrado correctamente");
+             // Mensaje de éxito
+             //document.getElementById("mensaje").innerText = result.message || "Usuario registrado correctamente ✅";
             }
 
 
