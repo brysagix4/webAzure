@@ -73,6 +73,7 @@ document.getElementById("registroForm").addEventListener("submit", async functio
             alert("Usuario registrado correctamente");
              // Mensaje de éxito
              //document.getElementById("mensaje").innerText = result.message || "Usuario registrado correctamente ✅";
+            document.getElementById("registroForm").reset();
             }
 
 
