@@ -25,7 +25,7 @@ document.getElementById("registroForm").addEventListener("submit", async functio
     });
 
     // Muestra toda la respuesta HTTP (para depuración)
-    console.log("HTTP response:", response);
+    //console.log("HTTP response:", response);
 
     const result = await response.json();
 
