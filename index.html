@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro de Usuarios</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Registro de Usuarios</h1>
+    <h2>Registro de Usuario</h2>
+
     <form id="registroForm">
-      <input type="text" id="userID" placeholder="ID de usuario" required />
+      <input type="number" id="userID" placeholder="ID de usuario" required />
       <input type="text" id="nombre1" placeholder="Primer nombre" required />
       <input type="text" id="nombre2" placeholder="Segundo nombre" />
       <input type="text" id="apellido1" placeholder="Primer apellido" required />
       <input type="text" id="apellido2" placeholder="Segundo apellido" />
       <input type="email" id="email" placeholder="Correo electrónico" required />
-      <input type="text" id="username" placeholder="Nombre de usuario" required />
-      <input type="password" id="password" placeholder="Contraseña" required />
+      <input type="text" id="username" placeholder="Nombre de usuario (opcional)" />
 
       <button type="submit">Registrar</button>
     </form>
 
-    <div id="mensaje"></div>
+    <p id="mensaje"></p>
   </div>
 
   <script src="script.js"></script>
