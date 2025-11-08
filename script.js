@@ -21,7 +21,14 @@ document.getElementById("registroForm").addEventListener("submit", async functio
       body: JSON.stringify(data)
     });
 
+    // Muestra toda la respuesta HTTP (para depuración)
+    console.log("HTTP response:", response);
+
     const result = await response.json();
+
+    // Muestra el contenido JSON devuelto por tu Lambda
+    console.log("Respuesta del servidor:", result);
+
     document.getElementById("mensaje").innerText = result.message || "Usuario registrado correctamente ✅";
   } catch (error) {
     console.error("Error:", error);
