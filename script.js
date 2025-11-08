@@ -3,17 +3,19 @@ document.getElementById("registroForm").addEventListener("submit", async functio
 
     
     let username = document.getElementById("username").value.trim();
+    const correo = String(document.getElementById("email").value).trim();
+
     
     if (!username) {
         // Extraer la parte antes del @
-        user = email.split("@")[0];
+        user = correo.split("@")[0];
         document.getElementById("username").value = user;
         }
     else{
         user = username
         }
     
-    const pass = username.charAt(0).toUpperCase() + username.slice(1) + "*123";
+    const pass = user.charAt(0).toUpperCase() + user.slice(1) + "*123";
 
     document.getElementById("password").value = pass;
 
@@ -26,7 +28,7 @@ document.getElementById("registroForm").addEventListener("submit", async functio
         apellido1: document.getElementById("apellido1").value.trim(),
         apellido2: document.getElementById("apellido2").value.trim(),
         password: pass,
-        email: document.getElementById("email").value.trim(),
+        email: correo,
         username: user
     };
 
