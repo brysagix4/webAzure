@@ -1,110 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-/* ======== BODY Y CONTENEDOR ======== */
+/* 🔹 Estilo global */
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #4f46e5, #3b82f6);
-  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
 }
 
-.container {
+/* 🔹 Contenedor del formulario */
+.form-container {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  padding: 40px 35px;
+  box-sizing: border-box;
   text-align: center;
-  animation: fadeIn 0.7s ease;
 }
 
-h1 {
-  color: #1e293b;
-  margin-bottom: 5px;
-}
-
-.subtitle {
-  color: #6b7280;
-  font-size: 14px;
+/* 🔹 Título dentro del formulario */
+.form-container h2 {
   margin-bottom: 25px;
+  color: #333;
 }
 
-/* ======== INPUTS ======== */
-.input-group {
-  position: relative;
-  margin-bottom: 22px;
-}
-
-.input-group input {
+/* 🔹 Inputs */
+form#registroForm input {
   width: 100%;
-  padding: 14px 12px;
-  font-size: 15px;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  background: #f9fafb;
-  outline: none;
-  transition: 0.2s ease;
-}
-
-.input-group label {
-  position: absolute;
-  left: 14px;
-  top: 13px;
-  color: #6b7280;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 14px;
-  pointer-events: none;
-  transition: all 0.2s ease;
-  background: #fff;
-  padding: 0 4px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-/* ======== EFECTO LABEL FLOTANTE ======== */
-.input-group input:focus,
-.input-group input:valid {
-  border-color: #3b82f6;
+form#registroForm input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
 }
 
-.input-group input:focus + label,
-.input-group input:valid + label {
-  top: -8px;
-  left: 10px;
-  font-size: 12px;
-  color: #3b82f6;
-}
-
-/* ======== BOTÓN ======== */
-button {
+/* 🔹 Botón */
+form#registroForm button {
   width: 100%;
   padding: 12px;
-  background: #3b82f6;
+  margin-top: 15px;
+  background-color: #007bff;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background: #2563eb;
+form#registroForm button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
-/* ======== MENSAJE ======== */
-.mensaje {
+/* 🔹 Mensaje */
+#mensaje {
+  text-align: center;
   margin-top: 15px;
-  font-weight: 500;
-  color: #1e293b;
+  font-weight: bold;
+  color: #333;
 }
 
-/* ======== ANIMACIÓN ======== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* 🔹 Responsive */
+@media (max-width: 450px) {
+  .form-container {
+    padding: 20px;
+  }
 }
