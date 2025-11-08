@@ -57,7 +57,7 @@ document.getElementById("registroForm").addEventListener("submit", async functio
     
         if (result.status === false) {
         // Mensaje de error que viene del backend
-            document.getElementById("mensaje").innerText = result.message || "❌ Error al registrar el usuario";
+            document.getElementById("mensaje").innerText = "❌ Error al registrar el usuario";
             } 
 
         else {  
