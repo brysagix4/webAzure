@@ -54,9 +54,20 @@ document.getElementById("registroForm").addEventListener("submit", async functio
         const result = await response.json(); // Convierte la respuesta a JSON
         console.log("Respuesta del servidor:", result);
 
-        document.getElementById("mensaje").innerText = result.message || "Usuario registrado correctamente ✅";
+    
+        if (result.status === false) {
+        // Mensaje de error que viene del backend
+            document.getElementById("mensaje").innerText = result.message || "❌ Error al registrar el usuario";
+            } 
+
+        else {  
+        // Mensaje de éxito
+             document.getElementById("mensaje").innerText = result.message || "Usuario registrado correctamente ✅";
+            }
+
+
+
     } catch (error) {
         console.error("Error:", error);
-        document.getElementById("mensaje").innerText = "❌ Error al registrar el usuario";
     }
 });
